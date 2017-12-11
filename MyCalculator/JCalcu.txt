@@ -1,0 +1,105 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+public class JCalcu implements ActionListener {
+
+    JFrame JF;  //框架
+    JTextField jt;  //文本框
+    JButton an1,an2,an3,an4,an5,an6,an7,an8,an9,an10,
+            an11,an12,an13,an14,an15,an16,an17,an18,an19,an20;
+
+    public JCalcu() {
+        JF=new JFrame();
+        JF.setBounds(300, 300, 210, 350);
+        JF.setLayout(null);
+
+        jt = new JTextField(15);
+        an1=new JButton("%");an1.addActionListener(this);
+        an2=new JButton("/");an2.addActionListener(this);
+        an3=new JButton("+");an3.addActionListener(this);
+        an4=new JButton("-");an4.addActionListener(this);
+        an5=new JButton("7");an5.addActionListener(this);
+        an6=new JButton("8");an6.addActionListener(this);
+        an7=new JButton("9");an7.addActionListener(this);
+        an8=new JButton("*");an8.addActionListener(this);
+        an9=new JButton("4");an9.addActionListener(this);
+        an10=new JButton("5");an10.addActionListener(this);
+        an11=new JButton("6");an11.addActionListener(this);
+        an12=new JButton("CE");an12.addActionListener(this);
+        an13=new JButton("1");an13.addActionListener(this);
+        an14=new JButton("2");an14.addActionListener(this);
+        an15=new JButton("3");an15.addActionListener(this);
+        an16=new JButton("C");an16.addActionListener(this);
+        an17=new JButton("00");an17.addActionListener(this);
+        an18=new JButton("0");an18.addActionListener(this);
+        an19=new JButton(".");an19.addActionListener(this);
+        an20=new JButton("=");an20.addActionListener(this);
+
+
+        JF.getContentPane().add(jt);
+        jt.setBounds(10, 20, 190, 30);
+        //第一排按钮
+        JF.getContentPane().add(an1);
+        an1.setBounds(10,60,40,30);
+        JF.getContentPane().add(an2);
+        an2.setBounds(60,60,40,30);
+        JF.getContentPane().add(an3);
+        an3.setBounds(110,60,40,30);
+        JF.getContentPane().add(an4);
+        an4.setBounds(160,60,40,30);
+        //第二排按钮
+        JF.getContentPane().add(an5);
+        an5.setBounds(10,100,40,30);
+        JF.getContentPane().add(an6);
+        an6.setBounds(60,100,40,30);
+        JF.getContentPane().add(an7);
+        an7.setBounds(110,100,40,30);
+        JF.getContentPane().add(an8);
+        an8.setBounds(160,100,40,30);
+        //第三排按钮
+        JF.getContentPane().add(an9);
+        an9.setBounds(10,140,40,30);
+        JF.getContentPane().add(an10);
+        an10.setBounds(60,140,40,30);
+        JF.getContentPane().add(an11);
+        an11.setBounds(110,140,40,30);
+        JF.getContentPane().add(an12);
+        an12.setBounds(160,140,40,30);
+        //第四排按钮
+        JF.getContentPane().add(an13);
+        an13.setBounds(10,180,40,30);
+        JF.getContentPane().add(an14);
+        an14.setBounds(60,180,40,30);
+        JF.getContentPane().add(an15);
+        an15.setBounds(110,180,40,30);
+        JF.getContentPane().add(an16);
+        an16.setBounds(160,180,40,30);
+        //第五排按钮
+        JF.getContentPane().add(an17);
+        an17.setBounds(10,220,40,30);
+        JF.getContentPane().add(an18);
+        an18.setBounds(60,220,40,30);
+        JF.getContentPane().add(an19);
+        an19.setBounds(110,220,40,30);
+        JF.getContentPane().add(an20);
+        an20.setBounds(160,220,40,30);
+
+
+        JF.setTitle("简易计算器");
+        JF.setVisible(true);
+        JF.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JF.setResizable(false);
+    }
+    //主函数    
+    public static void main(String[] args) {
+        new JCalcu();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        int count=0;
+        String wbk=e.getActionCommand();
+
+    }
+}
